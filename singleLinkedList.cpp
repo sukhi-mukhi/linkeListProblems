@@ -1,36 +1,37 @@
+/***********************************
+LINKED LIST
+***********************************/
+
 #include <iostream>
 using namespace std;
 
 struct Node{
-    int data;
-    Node* next;
+  int data;
+  Node* next;
 };
+
 
 
 int main()
 {
-    Node* head;
-    Node* one=NULL;
-    Node* two=NULL;
-    Node* three=NULL;
+    Node* head=NULL;
+    Node* one = new Node;
+    Node* two = new Node;
+    Node* three = new Node;
     
-    //allocate nodes
-    one= new Node();
-    two= new Node();
-    three= new Node();
-    //allocate data
-	one->data=1;
+    one->data=1;
     two->data=2;
     three->data=3;
-	//allocate next node
+    
+    head=one;
     one->next=two;
     two->next=three;
     three->next=NULL;
-
-    head=one;
     
     while(head!=NULL){
-        cout<<head->data;
+        cout<<head->data<<" ";
         head=head->next;
     }
+    
+    return 0;
 }
