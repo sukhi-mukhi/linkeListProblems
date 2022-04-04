@@ -10,8 +10,6 @@ struct Node{
   Node* next;
 };
 
-
-
 int main()
 {
     Node* head=NULL;
